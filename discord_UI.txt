@@ -1,3 +1,10 @@
+do
+	local target = game:GetService("CoreGui"):FindFirstChild("Discord_UI")
+	if target then
+		target:Destroy()
+	end
+end
+
 local DiscordLib = {}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -82,7 +89,7 @@ local function MakeDraggable(topbarobject, object)
 end
 
 local Discord = Instance.new("ScreenGui")
-Discord.Name = "Discord"
+Discord.Name = "Discord_UI"
 Discord.Parent = game.CoreGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
